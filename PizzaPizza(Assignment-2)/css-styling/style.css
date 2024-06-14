@@ -1,0 +1,127 @@
+
+/*defining area of coverage*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Oxanium, sans-serif;
+}
+
+/*defining basic body styling*/
+body {
+    font-family: Oxanium, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 25% 35% 40%;
+    align-items: center;
+    justify-content: space-between; /* Aligns items to the edges */
+    background-color: #f8f8f8; /*keeping background colour as white*/
+    background-color:rgba(255, 165, 0, 0.5); /*putting a slight orange tint on the header*/
+    height: 125px;
+}
+
+
+header > div{
+    height: 115px;
+    width: auto;
+}
+
+header > div > a > img{
+    width: auto;
+    height: 100%;
+}
+
+header > nav > menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, auto); /*adjusting width of every element of the lsit*/
+    gap: 20px; /* Add some gap between items */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+header > nav > menu > li > a {
+    color: #ff9800; /*giving a color to the header list elements*/
+    text-decoration: none;
+    padding: 10px 20px; /*adding padding to make area larger*/
+}
+
+.masthead{
+    grid-area: mast;
+    grid-template-columns: 100%;
+    align-items: center; /*centers the items*/
+    text-align: center; /* centers the text*/
+    background-image: url('../images/pizzabanner.webp'); /* background image of masthead */
+    background-size:cover ; /* to cover masthead height */
+    background-position: center; /* centre the image */
+    height: 85vh; /* fixed height for the masthead*/
+}
+
+/*giving a nice color to heading 2*/
+h2 {
+    color: #ff9800;
+    padding-bottom: 10px;
+}
+
+/*sizing the h2 font of masthead*/
+.masthead h2{
+    font-size: 40px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2em;
+    background-color: white;
+}
+
+/* Form  styling */
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*styling the submit button*/
+button[type="submit"] {
+    background-color: #ff9800;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; /* to turn normal cursor into a pointer when it is on the button*/
+}
+
+/* Footer Styling*/
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #ff9800;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}

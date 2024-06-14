@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--adding all the important meta tags.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pizza Pizza mock webpage_assignment_2">
+    <meta name="robots" content="nofollow, noindex">
+    <title>PizzaPizza</title>
+    <!-- linking the custom google fonts that are to be used-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=League+Gothic&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Creating a link with external CSS file ( very important )-->
+    <link rel="stylesheet" href="./css-styling/style.css">
+</head>
+
+<body>
+<!--Starting with the header -->
+<header>
+    <!-- Inserting a logo to the header( a png one )-->
+    <div>
+        <!-- logo -->
+        <a href="index.html"><img src="./images/logo.png" alt="png logo"></a>
+    </div>
+    <div>
+        <!--adding a pizza slice gif-->
+        <a href="index.html"><img src="./images/slice.gif" alt="pizza slice gif"></a>
+    </div>
+
+    <!-- Creating navigation menu for the nav bar-->
+
+    <nav>
+        <!-- our header list -->
+        <menu>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">COUPONS</a></li>
+            <li><a href="#">SIGN IN</a></li>
+        </menu>
+    </nav>
+</header>
+
+<!-- Creating a masthead-->
+
+<main>
+    <section class="masthead">
+        <h1>BRINGING FAMILIES CLOSER</h1>
+        <h2>ONE SLICE AT A TIME :)</h2>
+
+    </section>
+        <form action="somephpfile" method="post" enctype="multipart/form-data">
+            <!-- using different divs to avoid using br tag-->
+            <!-- placing input options for each individual information required-->
+
+            <h3>CONTACT INFORMATION:</h3>
+
+            <!-- Name input -->
+            <div class="form-group">
+                <label for="name">Name-</label> <!-- lable contains the info to be displayed -->
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <!-- Email input for a second mode of contact other than phone number -->
+            <div class="form-group">
+                <label for="email">Email-</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Phone number input -->
+            <div class="form-group">
+                <label for="phone">Phone Number-</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <h3>ADDRESS:</h3>
+
+            <!-- Address input -->
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <h3>CUSTOMIZE YOUR PIZZA:</h3>
+
+            <!-- Letting the user enter number of pizzas -->
+            <div class="form-group">
+                <label>Quantity of Pizza's:</label>
+                <input type="number" name="quantity" min="1" max="10">
+            </div>
+
+            <!-- Pizza size selection -->
+            <div class="form-group">
+                <label for="size">Pizza Size:</label>
+                <select id="size" name="size" required>
+                    <option value="" disabled selected>Select a size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="party size">Party size</option>
+                </select>
+            </div>
+
+            <!-- Selection of topping-->
+
+            <div class="form-group">
+                <!-- Giving the user options of toppings that will go on top of the pizza-->
+                <h3>Choose your toppings:</h3>
+                <div>
+                    <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+                    <label for="pepperoni">Pepperoni</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="onions" name="toppings" value="onions">
+                    <label for="onions">Onions</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="sausage" name="toppings" value="sausage">
+                    <label for="sausage">Sausages</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="bacon" name="toppings" value="bacon">
+                    <label for="bacon">Bacon</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="extra-cheese" name="toppings" value="extra-cheese">
+                    <label for="extra-cheese">Cheese Only</label>
+                </div>
+            </div>
+
+            <!-- Type of crust-->
+            <div class="form-group">
+                <h3>Choose base type:</h3>
+                <div>
+                    <input type="radio" id="HT" name="crust" value="HT" required>
+                    <label for="HT">Hand Tossed</label>
+                </div>
+                <div>
+                    <input type="radio" id="CB" name="crust" value="NYS" required>
+                    <label for="CB">Cheese Burst</label>
+                </div>
+                <div>
+                    <input type="radio" id="HP" name="crust" value="HP" required>
+                    <label for="HP">Handmade Pan</label>
+                </div>
+                <div>
+                    <input type="radio" id=DD name="crust" value="HP" required>
+                    <label for="DD">Deep Dish Pizza</label>
+                </div>
+            </div>
+
+            <!-- giving an option of adding additional extra instructions to the user-->
+            <div class="form-group">
+                <label for="SI">Instructions for the chef:</label>
+                <input type="text" id="SI" name="special-instructions">
+            </div>
+
+            <!-- Discount enabling -->
+            <div class="form-group">
+                <label for="DE">Enter Coupon code:</label>
+                <input type="text" id="DE" name="CC">
+
+            </div>
+
+            <!-- Seasoning -->
+            <div class="form-group">
+                <label>Do you want Oregano and pizza seasoning on the size?</label>
+                <div>
+                    <input type="radio" id="oregano-yes" name="oregano-chili" value="Yes" checked>
+                    <label for="oregano-yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="oregano-no" name="oregano-chili" value="No">
+                    <label for="oregano-no">No</label>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit Order</button>
+        </form>
+</main>
+<!-- Footer section -->
+<footer>
+    <!-- Copyright information -->
+    <p>&copy; 2024,Pizza Pizza Inc.</p>
+</footer>
+</body>
+</html>
